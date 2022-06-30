@@ -113,6 +113,19 @@ class Person {
     this.id = id;
     this.name = name;
   }
+  register() {
+    console.log(`${this.id} is registered`);
+  }
 }
 const prem = new Person(1, "Prem Kumar");
 const prem1 = new Person(2, "kumar kumar");
+prem.register();
+
+//generics reusable components with type parameters
+
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items);
+}
+
+let numArray = getArray<number>([1, 2, 3]);
+let strArray = getArray<string>(["Max", "Manu"]);
