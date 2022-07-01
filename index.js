@@ -63,7 +63,17 @@ var Person = /** @class */ (function () {
         this.id = id;
         this.name = name;
     }
+    Person.prototype.register = function () {
+        console.log("".concat(this.id, " is registered"));
+    };
     return Person;
 }());
 var prem = new Person(1, "Prem Kumar");
 var prem1 = new Person(2, "kumar kumar");
+prem.register();
+//generics reusable components with type parameters
+function getArray(items) {
+    return new Array().concat(items);
+}
+var numArray = getArray([1, 2, 3]);
+var strArray = getArray(["Max", "Manu"]);
